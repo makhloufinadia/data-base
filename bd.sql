@@ -1,3 +1,7 @@
+CONNECT system/orcl1
+spool C:\Users\HP\Desktop\TP-BDD\--Create a new Package Body
+
+CREATE PACKAGE BODY PACKAGE1 IS
 create table CLIENT
   2  (codeC varchar (12) primary key,
   3  Nom varchar (12),
@@ -40,3 +44,21 @@ alter table client
   2  rename column pays TO willaya;
 alter table client
   2  add constraint c9 check (willaya in ('ADRAR','ORAN','BLIDA','BOUMERDES','ANNABA','ALGER','BOUIRA','BISKRA'));
+
+
+  -- Add procedure body
+  PROCEDURE PROCEDURE1 (
+    PARAM1 IN NUMBER) IS
+    BEGIN
+      NULL;
+    END PROCEDURE1;
+
+  -- Add function body
+  FUNCTION FUNCTION1 (
+    PARAM1 IN NUMBER) RETURN NUMBER IS
+    BEGIN
+      RETURN NULL;
+    END FUNCTION1;
+
+END PACKAGE1;
+/
